@@ -14,6 +14,6 @@
 #### 3、具体onMeasure()的计算方法。
 - 3.1 通过遍历measureChildWithMargins()测量每一个childview宽高。
 - 3.2 通过吧childView的width值加起来lineWidthUsed 对比 当前view的宽度tagLayoutSpecWidthSize = MeasureSpec.getSize(widthMeasureSpec);  
-3.2.1 如果lineWidthUsed 小于 tagLayoutSpecWidthSize，那么就直接存到List<Rect>中    
-3.2.2 如果lineWidthUsed 大于 tagLayoutSpecWidthSize，那么就错一行，把高度加高，然后把新高度当成起始点。这时需要再调用measureChildWithMargins一次，因为上一次调用时，如果当前view的宽度不够它全展开，那么它会自己压缩自己，所以我们需要把lineWidthUsed设为0，再调一次。
+- 3.3 如果lineWidthUsed 小于 tagLayoutSpecWidthSize，那么就直接存到List<Rect>中    
+- 3.4 如果lineWidthUsed 大于 tagLayoutSpecWidthSize，那么就错一行，把高度加高，然后把新高度当成起始点。这时需要再调用measureChildWithMargins一次，因为上一次调用时，如果当前view的宽度不够它全展开，那么它会自己压缩自己，所以我们需要把lineWidthUsed设为0，再调一次。
 
