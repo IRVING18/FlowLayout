@@ -27,41 +27,6 @@
      */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        /*  //拿到开发者xml的要求
-            LayoutParams layoutParams = child.getLayoutParams();
-            //获取当前viewGroup的模式
-            int specWidthMode = MeasureSpec.getMode(widthMeasureSpec);
-            int specWidthSize = MeasureSpec.getMode(heightMeasureSpec);
-            //子view的模式和size、
-            int childWidthMode;
-            int childWidthSize;
-            switch (layoutParams.width) {
-                case LayoutParams.MATCH_PARENT:
-                    switch (specWidthMode) {
-                        //如果当前ViewGroup是具体的高度
-                        case MeasureSpec.EXACTLY:
-                            //最大值和
-                        case MeasureSpec.AT_MOST:
-//                            那么子view的模式也就确定了
-                            childWidthMode = MeasureSpec.EXACTLY;
-                            //当前viewGroup的size减去用掉的width，
-                            childWidthSize = specWidthSize - usedWidth;
-
-                            break;
-                        case MeasureSpec.UNSPECIFIED:
-                            childWidthMode = MeasureSpec.UNSPECIFIED;
-                            childWidthSize = 0;
-                            break;
-                    }
-                    break;
-                case LayoutParams.WRAP_CONTENT:
-                    break;
-            }
-            child.measure();
-            */
-
-//        这是就是 measureChildWithMargins()内部实现的思路
-
         //横向当前行已使用的宽度
         int lineWidthUsed  = 0;
         //总高度
