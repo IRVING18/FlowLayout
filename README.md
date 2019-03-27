@@ -1,5 +1,7 @@
 # FlowLayout 流式布局
 
+![linear](https://github.com/IRVING18/notes/blob/master/android/file/flowLayout.jpg)
+
 # 一、实现思路
 #### 1、通过重写onMeasure()方法，获取自己的宽高和childView的宽高。
 - 1.1 通过调用childView的measure()方法，然后让子view自己测量。这其中涉及MeasureSpec.UNSPECIFIED等模式，但是这些操作都是定式的，只需要调用**measureChildWithMargins()** 方法，就帮我们完成了各个模式下让子view.measure()的方法了。
